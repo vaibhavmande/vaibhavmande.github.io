@@ -133,6 +133,14 @@ p span {
   margin-bottom: 2rem;
 }
 
+.mr1 {
+  margin-right: 0.5rem;
+}
+
+.pb3 {
+  padding-bottom: 1.5rem;
+}
+
 .df {
   display: flex;
 }
@@ -224,4 +232,29 @@ a {
 
 .radius {
   position: relative;
+}
+
+.button-gold {
+  border: 1px solid gold;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: gold;
+  color: black;
+  margin: 0 10px;
+}
+
+.contact-button {
+  margin: 5px 0;
+}
+
+.card-title-contact {
+  padding-bottom: 18px;
+}
+
+.button-brown {
+  padding: 0 2px;
+  color: white;
+  border: none;
+  background-color: brown;
+  border-radius: 2px;
 }
