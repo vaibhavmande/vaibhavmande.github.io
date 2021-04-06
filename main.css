@@ -145,7 +145,7 @@ p span {
   display: flex;
 }
 
-.project-container {
+.card-container {
   width: 280px;
   border-radius: 2px;
   line-height: 1.5em;
@@ -154,7 +154,7 @@ p span {
   color: #fff;
 }
 
-.project-title {
+.card-title {
   padding: 24px 12px 38px 12px;
   text-align: center;
   font-size: 22px;
@@ -230,7 +230,7 @@ a {
   text-align: center;
 }
 
-.radius {
+.card-contents {
   position: relative;
 }
 
@@ -257,4 +257,10 @@ a {
   border: none;
   background-color: brown;
   border-radius: 2px;
+}
+
+.vertical-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
