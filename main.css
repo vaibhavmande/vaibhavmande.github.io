@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-color: #151515;
-  font-family: Merriweather, serif;
+  font-family: 'Merriweather', serif;
   color: #fff;
 }
 
@@ -245,6 +245,7 @@ a {
   background-color: gold;
   color: black;
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .contact-button {
@@ -309,4 +310,23 @@ section.title {
   padding: 0;
   text-align: center;
   opacity: 0.6;
+}
+
+.button-gold.source:hover {
+  filter: brightness(70%);
+}
+.source {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.git {
+  background-image: url('/assets/github.svg');
+  min-height: 17px;
+  display: inline-block;
+  width: 16px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  padding-right: 4px;
 }
