@@ -9,25 +9,6 @@ body {
   color: #fff;
 }
 
-ul {
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
 main {
   margin-top: 75px;
   padding: 0 50px;
@@ -147,6 +128,7 @@ p span {
 
 .df {
   display: flex;
+  flex-direction: column;
 }
 
 .card-container {
@@ -195,12 +177,7 @@ p span {
   background: #82a0aa;
 }
 
-.card-footer {
-  margin: 15px 0;
-  display: flex;
-}
-
-a {
+.contact {
   text-decoration: none;
   color: #fff;
 }
