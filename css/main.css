@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 .pt12 {
   padding-top: 12px; }
@@ -200,12 +199,10 @@ section.title {
   display: inline-flex; }
   .project-button .source-btn-image {
     width: 16px;
-    height: 16px;
     transform: translateY(-1px);
     padding-right: 2px; }
   .project-button .demo-btn-image {
     width: 16px;
-    height: 16px;
     padding-right: 2px; }
 
 @media only screen and (max-width: 674px) {

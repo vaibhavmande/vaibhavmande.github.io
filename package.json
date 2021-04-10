@@ -1,28 +1,19 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "portfolio website for Vaibhav Mande",
+  "description": "portfolio",
   "main": "index.html",
   "scripts": {
     "sass": "node-sass --output-style expanded public/scss/main.scss -o public/css/",
-    "watch-sass": "node-sass -w --output-style expanded public/scss/main.scss -o public/css/"
+    "watch-sass": "node-sass -w --output-style expanded public/scss/main.scss -o public/css/",
+    "gulp": "gulp"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vaibhavmande/vaibhavmande.github.io.git"
-  },
-  "keywords": [
-    "portfolio",
-    "html",
-    "css"
-  ],
   "author": "vaibhavmande",
-  "bugs": {
-    "url": "https://github.com/vaibhavmande/vaibhavmande.github.io/issues"
-  },
-  "homepage": "https://github.com/vaibhavmande/vaibhavmande.github.io#readme",
-  "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
   }
 }
