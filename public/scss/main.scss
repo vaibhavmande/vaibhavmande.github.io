@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import './colors.scss';
 @import './spacing.scss';
 @import './media-queries.scss';
 
@@ -6,9 +7,9 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #151515;
+  background-color: $background-color;
   font-family: 'Merriweather', serif;
-  color: #fff;
+  color: white;
 }
 
 a {
@@ -31,30 +32,7 @@ h1 {
   color: #ff505a;
 }
 
-.contact a {
-  text-decoration: none;
-  color: #fafbfc;
-}
-
-.separator {
-  padding: 0 15px;
-}
-
-.about {
-  margin-bottom: 16px;
-  padding-right: 32px;
-  opacity: 0.6;
-  color: #d8d8d8;
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
-}
-
-.about p {
-  margin-top: 12px;
-}
-p span {
+.flag {
   opacity: 1;
 }
 
@@ -62,23 +40,12 @@ p span {
   margin-top: 25px;
 }
 
-.color-separator {
-  border: 1px solid #ff505a;
-  width: 50px;
-  margin: 25px 0;
-}
-
-.color-separator-full {
-  border: 1px solid #ff505a;
-  margin: 25px 0;
-}
-
 .experience p:not(.title) {
   padding: 12px 0;
 }
 
 .light-text {
-  color: #d8d8d8;
+  color: $light-text-color;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -99,7 +66,7 @@ p span {
   border-radius: 2px;
   line-height: 1.5em;
   letter-spacing: 0.4px;
-  background-color: #202022;
+  background-color: $card-background-color;
   color: #fff;
 
   .card-title-project {
@@ -141,14 +108,6 @@ p span {
   color: #fff;
 }
 
-.highlight {
-  text-decoration: none;
-  background-image: linear-gradient(#151515 50%, gold 50%);
-  background-size: auto 54px;
-  display: inline;
-  padding-bottom: 5px;
-}
-
 .float {
   position: absolute;
   top: -21px;
@@ -179,7 +138,7 @@ p span {
     margin-bottom: 15px;
     border-radius: 2px 0;
     border-top: 2px solid white;
-    box-shadow: 0px 2px 2px rgba(252, 223, 96, 0.2);
+    box-shadow: 0px 2px 2px $card-shadow-color;
   }
 }
 
@@ -192,7 +151,7 @@ section.title {
 }
 
 .project-name {
-  border-bottom: 2px solid gold;
+  border-bottom: 2px solid $accent-color-gold;
   display: inline;
   font-size: 18px;
 }
@@ -211,7 +170,7 @@ section.title {
 
 .button {
   padding: 3px 5px;
-  background-color: #fcdf60;
+  background-color: $button-color-yellow;
   border-radius: 2px;
   color: black;
   letter-spacing: normal;
