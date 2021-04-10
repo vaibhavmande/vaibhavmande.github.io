@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio website for Vaibhav Mande",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass --output-style expanded public/scss/main.scss -o public/css/",
+    "watch-sass": "node-sass -w --output-style expanded public/scss/main.scss -o public/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaibhavmande/vaibhavmande.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css"
+  ],
+  "author": "vaibhavmande",
+  "bugs": {
+    "url": "https://github.com/vaibhavmande/vaibhavmande.github.io/issues"
+  },
+  "homepage": "https://github.com/vaibhavmande/vaibhavmande.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

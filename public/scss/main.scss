@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import './spacing.scss';
+@import './media-queries.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #151515;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  margin-top: 75px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact a:hover {
+  color: #ff505a;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #fafbfc;
+}
+
+.separator {
+  padding: 0 15px;
+}
+
+.about {
+  margin-bottom: 16px;
+  padding-right: 32px;
+  opacity: 0.6;
+  color: #d8d8d8;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.about p {
+  margin-top: 12px;
+}
+p span {
+  opacity: 1;
+}
+
+.experience {
+  margin-top: 25px;
+}
+
+.color-separator {
+  border: 1px solid #ff505a;
+  width: 50px;
+  margin: 25px 0;
+}
+
+.color-separator-full {
+  border: 1px solid #ff505a;
+  margin: 25px 0;
+}
+
+.experience p:not(.title) {
+  padding: 12px 0;
+}
+
+.light-text {
+  color: #d8d8d8;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+}
+
+.sub-title {
+  font-weight: 250;
+}
+
+.df {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  width: 280px;
+  border-radius: 2px;
+  line-height: 1.5em;
+  letter-spacing: 0.4px;
+  background-color: #202022;
+  color: #fff;
+
+  .card-title-project {
+    padding: 24px 12px 32px 12px;
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+.card-title {
+  padding: 24px 12px 38px 12px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.description {
+  margin: 5px;
+  border-radius: 4px;
+  padding: 16px 5px 0;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.tags {
+  padding: 12px;
+  text-align: center;
+}
+
+.tag {
+  margin: 5px 2px;
+  padding: 0 4px;
+  border-radius: 2px;
+  display: inline-block;
+  background: #82a0aa;
+}
+
+.contact {
+  text-decoration: none;
+  color: #fff;
+}
+
+.highlight {
+  text-decoration: none;
+  background-image: linear-gradient(#151515 50%, gold 50%);
+  background-size: auto 54px;
+  display: inline;
+  padding-bottom: 5px;
+}
+
+.float {
+  position: absolute;
+  top: -21px;
+  width: 100%;
+  text-align: center;
+}
+
+.card-contents {
+  position: relative;
+}
+
+.pb18 {
+  padding-bottom: 18px;
+}
+
+.vertical-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-container {
+  text-align: center;
+  margin: 0 auto;
+
+  & > div {
+    display: inline-block;
+    margin-bottom: 15px;
+    border-radius: 2px 0;
+    border-top: 2px solid white;
+    box-shadow: 0px 2px 2px rgba(252, 223, 96, 0.2);
+  }
+}
+
+section.title {
+  text-align: center;
+}
+
+.project-card-heading {
+  margin-bottom: 10px;
+}
+
+.project-name {
+  border-bottom: 2px solid gold;
+  display: inline;
+  font-size: 18px;
+}
+
+.about-contents {
+  margin: 10px;
+  border-radius: 4px;
+  padding: 0;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.buttons-container {
+  text-align: center;
+}
+
+.button {
+  padding: 3px 5px;
+  background-color: #fcdf60;
+  border-radius: 2px;
+  color: black;
+  letter-spacing: normal;
+  line-height: normal;
+  &.red-button {
+    background-color: brown;
+    color: white;
+  }
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.project-button {
+  display: inline-flex;
+
+  .source-btn-image {
+    width: 16px;
+    transform: translateY(-1px);
+    padding-right: 2px;
+  }
+
+  .demo-btn-image {
+    width: 16px;
+    padding-right: 2px;
+  }
+}
