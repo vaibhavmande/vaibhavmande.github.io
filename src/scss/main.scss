@@ -85,13 +85,14 @@ h1 {
 .description {
   margin: 5px;
   border-radius: 4px;
-  padding: 16px 5px 0;
+  padding: 5px 5px 0;
   text-align: center;
   opacity: 0.6;
 }
 
 .tags {
   padding: 12px;
+  padding-bottom: 0;
   text-align: center;
 }
 
@@ -151,7 +152,7 @@ section.title {
 }
 
 .project-name {
-  border-bottom: 2px solid $accent-color-gold;
+  // border-bottom: 2px solid $accent-color-gold;
   display: inline;
   font-size: 18px;
 }
@@ -167,17 +168,19 @@ section.title {
 
 .buttons-container {
   text-align: center;
+  padding-top: 2px;
 }
 
 .button {
   padding: 3px 5px;
-  background-color: $button-color-yellow;
+  background-color: $button-color-primary;
   border-radius: 2px;
   color: black;
   letter-spacing: normal;
   line-height: normal;
-  &.red-button {
-    background-color: brown;
+  box-shadow: 0 4px 2px black;
+  &.secondary-button {
+    background-color: $button-color-secondary;
     color: white;
   }
   &:hover {
@@ -204,10 +207,16 @@ section.title {
 }
 
 .about-button {
-  background-color: white;
+  background-color: #0a66c2;
+  color: white;
   margin-top: 4px;
+  box-shadow: 0 4px 2px black;
   .button-image {
     transform: translateY(2px);
     padding-right: 4px;
   }
+}
+
+.spacer-bottom {
+  margin-bottom: 5px;
 }
