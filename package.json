@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass --output-style expanded public/scss/main.scss -o public/css/",
+    "watch-sass": "node-sass -w --output-style expanded public/scss/main.scss -o public/css/",
+    "gulp": "gulp"
+  },
+  "author": "vaibhavmande",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  }
+}
