@@ -16,15 +16,15 @@ gulp.task('reload', (cb) => {
 
 gulp.task('sass', () => {
   return gulp
-    .src('public/scss/*.scss')
+    .src('src/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('main.css'))
-    .pipe(gulp.dest('public/css'))
+    .pipe(gulp.dest('dist/css'))
 })
 
 gulp.task('watch', () => {
-  gulp.watch('public/scss/**/*.scss', gulp.series('sass', 'reload'))
-  gulp.watch('public/**/*.{js,css}', gulp.series('reload'))
+  gulp.watch('src/scss/**/*.scss', gulp.series('sass', 'reload'))
+  gulp.watch('src/**/*.{js,css}', gulp.series('reload'))
   gulp.watch('./*.html', gulp.series('reload'))
 })
 
