@@ -158,6 +158,7 @@ section.title {
 
 .about-contents {
   margin: 10px;
+  margin-bottom: 15px;
   border-radius: 4px;
   padding: 0;
   text-align: center;
@@ -194,5 +195,19 @@ section.title {
 
   .demo-btn-image {
     padding-right: 2px;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    filter: grayscale(1);
+  }
+}
+
+.about-button {
+  background-color: white;
+  margin-top: 4px;
+  .button-image {
+    transform: translateY(2px);
+    padding-right: 4px;
   }
 }
