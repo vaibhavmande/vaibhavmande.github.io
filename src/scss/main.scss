@@ -220,3 +220,33 @@ section.title {
 .spacer-bottom {
   margin-bottom: 5px;
 }
+
+// a.nostyle:link {
+//   text-decoration: inherit;
+//   color: inherit;
+//   cursor: auto;
+// }
+
+// a.nostyle:visited {
+//   text-decoration: inherit;
+//   color: inherit;
+//   cursor: auto;
+// }
+
+a.nostyle {
+  &:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+  &:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+  &.link {
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+}

@@ -28,4 +28,5 @@ gulp.task('watch', () => {
   gulp.watch('./*.html', gulp.series('reload'))
 })
 
+gulp.task('build', gulp.parallel('sass'))
 gulp.task('default', gulp.parallel('sass', 'serve', 'watch'))

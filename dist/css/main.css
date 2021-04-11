@@ -222,6 +222,21 @@ section.title {
 .spacer-bottom {
   margin-bottom: 5px; }
 
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto; }
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto; }
+
+a.nostyle.link {
+  cursor: pointer;
+  font-weight: bolder;
+  text-decoration: underline; }
+
 @media only screen and (max-width: 674px) {
   .cards-container {
     column-count: auto;
