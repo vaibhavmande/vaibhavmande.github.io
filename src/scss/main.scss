@@ -147,10 +147,6 @@ section.title {
   text-align: center;
 }
 
-.project-card-heading {
-  margin-bottom: 10px;
-}
-
 .project-name {
   // border-bottom: 2px solid $accent-color-gold;
   display: inline;
@@ -190,6 +186,8 @@ section.title {
 
 .project-button {
   display: inline-flex;
+  line-height: 1em;
+  padding: 5px;
 
   .source-btn-image {
     transform: translateY(-1px);
@@ -236,5 +234,44 @@ a.nostyle {
     cursor: pointer;
     font-weight: bolder;
     text-decoration: underline;
+  }
+}
+
+.card-project {
+  position: relative;
+  .project-card-heading {
+    margin-bottom: 10px;
+  }
+  .card-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .diagonal {
+    position: absolute;
+    z-index: 1000;
+    width: 150px;
+    right: -59px;
+    top: -1px;
+    background-color: #aa0000;
+    color: #fff;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: rotate(45deg) translateY(100%);
+    &:before {
+      content: '';
+      position: relative;
+      display: block;
+      left: 0;
+      // width: 600px;
+      // transform: rotate(45deg);
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+    }
+    &:after {
+      content: '';
+      position: relative;
+      display: block;
+      left: 0;
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+    }
   }
 }
