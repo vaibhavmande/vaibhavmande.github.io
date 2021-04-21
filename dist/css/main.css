@@ -243,7 +243,7 @@ a.nostyle.link {
   .card-project .card-container {
     position: relative;
     overflow: hidden; }
-  .card-project .diagonal {
+  .card-project .ribbon {
     position: absolute;
     z-index: 1000;
     width: 150px;
@@ -252,15 +252,15 @@ a.nostyle.link {
     background-color: #aa0000;
     color: #fff;
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transform: rotate(45deg) translateY(100%); }
-    .card-project .diagonal:before {
+    .card-project .ribbon:before {
       content: '';
       position: relative;
       display: block;
       left: 0;
       border: 1px dashed rgba(255, 255, 255, 0.4); }
-    .card-project .diagonal:after {
+    .card-project .ribbon:after {
       content: '';
       position: relative;
       display: block;

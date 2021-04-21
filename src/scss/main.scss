@@ -246,7 +246,7 @@ a.nostyle {
     position: relative;
     overflow: hidden;
   }
-  .diagonal {
+  .ribbon {
     position: absolute;
     z-index: 1000;
     width: 150px;
@@ -255,15 +255,13 @@ a.nostyle {
     background-color: #aa0000;
     color: #fff;
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transform: rotate(45deg) translateY(100%);
     &:before {
       content: '';
       position: relative;
       display: block;
       left: 0;
-      // width: 600px;
-      // transform: rotate(45deg);
       border: 1px dashed rgba(255, 255, 255, 0.4);
     }
     &:after {
