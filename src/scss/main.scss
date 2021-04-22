@@ -252,8 +252,8 @@ a.nostyle {
     width: 150px;
     right: -59px;
     top: -1px;
-    background-color: #aa0000;
-    color: #fff;
+    background-color: #f9f871;
+    color: #000;
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transform: rotate(45deg) translateY(100%);
@@ -262,14 +262,14 @@ a.nostyle {
       position: relative;
       display: block;
       left: 0;
-      border: 1px dashed rgba(255, 255, 255, 0.4);
+      border: 1px dashed #202022;
     }
     &:after {
       content: '';
       position: relative;
       display: block;
       left: 0;
-      border: 1px dashed rgba(255, 255, 255, 0.4);
+      border: 1px dashed #202022;
     }
   }
 }
