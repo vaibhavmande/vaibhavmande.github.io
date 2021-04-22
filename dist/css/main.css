@@ -37,6 +37,11 @@
     column-count: 2;
     width: 600px; } }
 
+@media only screen and (min-width: 998px) {
+  .cards-container {
+    column-count: 3;
+    width: 900px; } }
+
 main {
   padding: 0 50px; }
   @media only screen and (max-width: 399px) {
@@ -276,6 +281,11 @@ a.nostyle.link {
   .cards-container {
     column-count: 2;
     width: 600px; } }
+
+@media only screen and (min-width: 998px) {
+  .cards-container {
+    column-count: 3;
+    width: 900px; } }
 
 main {
   padding: 0 50px; }
