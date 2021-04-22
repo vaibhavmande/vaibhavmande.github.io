@@ -1,6 +1,7 @@
 $media_queries: (
   'one-column': 'only screen and (max-width: 674px)',
   'two-column': 'only screen and (min-width: 675px)',
+  'three-column': 'only screen and (min-width: 998px)',
   'main20': 'only screen and (max-width: 399px)',
   'main5': 'only screen and (max-width: 339px)',
   'main0': 'only screen and (max-width: 309px)',
@@ -15,6 +16,11 @@ $media_queries: (
   @media #{map-get($media_queries, 'two-column')} {
     column-count: 2;
     width: 600px;
+  }
+
+  @media #{map-get($media_queries, 'three-column')} {
+    column-count: 3;
+    width: 900px;
   }
 }
 

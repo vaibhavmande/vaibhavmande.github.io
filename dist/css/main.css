@@ -37,6 +37,11 @@
     column-count: 2;
     width: 600px; } }
 
+@media only screen and (min-width: 998px) {
+  .cards-container {
+    column-count: 3;
+    width: 900px; } }
+
 main {
   padding: 0 50px; }
   @media only screen and (max-width: 399px) {
@@ -166,9 +171,6 @@ h1 {
 section.title {
   text-align: center; }
 
-.project-card-heading {
-  margin-bottom: 10px; }
-
 .project-name {
   display: inline;
   font-size: 18px; }
@@ -200,7 +202,9 @@ section.title {
     filter: brightness(0.8); }
 
 .project-button {
-  display: inline-flex; }
+  display: inline-flex;
+  line-height: 1em;
+  padding: 5px; }
   .project-button .source-btn-image {
     transform: translateY(-1px);
     padding-right: 2px; }
@@ -237,6 +241,37 @@ a.nostyle.link {
   font-weight: bolder;
   text-decoration: underline; }
 
+.card-project {
+  position: relative; }
+  .card-project .project-card-heading {
+    margin-bottom: 10px; }
+  .card-project .card-container {
+    position: relative;
+    overflow: hidden; }
+  .card-project .ribbon {
+    position: absolute;
+    z-index: 1000;
+    width: 150px;
+    right: -59px;
+    top: -1px;
+    background-color: #f9f871;
+    color: #000;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transform: rotate(45deg) translateY(100%); }
+    .card-project .ribbon:before {
+      content: '';
+      position: relative;
+      display: block;
+      left: 0;
+      border: 1px dashed #202022; }
+    .card-project .ribbon:after {
+      content: '';
+      position: relative;
+      display: block;
+      left: 0;
+      border: 1px dashed #202022; }
+
 @media only screen and (max-width: 674px) {
   .cards-container {
     column-count: auto;
@@ -246,6 +281,11 @@ a.nostyle.link {
   .cards-container {
     column-count: 2;
     width: 600px; } }
+
+@media only screen and (min-width: 998px) {
+  .cards-container {
+    column-count: 3;
+    width: 900px; } }
 
 main {
   padding: 0 50px; }
