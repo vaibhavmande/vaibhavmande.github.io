@@ -223,7 +223,7 @@ a.nostyle {
   &:link {
     text-decoration: inherit;
     color: inherit;
-    cursor: auto;
+    cursor: pointer;
   }
   &:visited {
     text-decoration: inherit;
@@ -233,6 +233,9 @@ a.nostyle {
   &.link {
     cursor: pointer;
     font-weight: bolder;
+    text-decoration: underline;
+  }
+  &.hover:hover {
     text-decoration: underline;
   }
 }

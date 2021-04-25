@@ -229,7 +229,7 @@ section.title {
 a.nostyle:link {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto; }
+  cursor: pointer; }
 
 a.nostyle:visited {
   text-decoration: inherit;
@@ -239,6 +239,9 @@ a.nostyle:visited {
 a.nostyle.link {
   cursor: pointer;
   font-weight: bolder;
+  text-decoration: underline; }
+
+a.nostyle.hover:hover {
   text-decoration: underline; }
 
 .card-project {
