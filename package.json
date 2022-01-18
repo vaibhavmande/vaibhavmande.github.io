@@ -1,19 +1,19 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "portfolio",
-  "main": "index.html",
+  "name": "vaibhavmande.github.io",
+  "private": true,
   "scripts": {
-    "sass": "node-sass --output-style expanded public/scss/main.scss -o public/css/",
-    "watch-sass": "node-sass -w --output-style expanded public/scss/main.scss -o public/css/",
-    "gulp": "gulp"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "author": "vaibhavmande",
+  "dependencies": {
+    "next": "12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
   "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^5.0.0"
+    "eslint-config-next": "12.0.8",
+    "prettier": "2.5.1"
   }
 }

@@ -1,37 +1,34 @@
-<h1 align="center">Hello everyone 👋, I am Vaibhav</h1>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-SASS-bf4080"/>
-  <img src="https://img.shields.io/badge/Using-Gulp-%23eb4a4b">
-  <img src="https://img.shields.io/github/languages/top/vaibhavmande/vaibhavmande.github.io"/>
-  <a href="https://www.linkedin.com/in/vaibhavmande/" title="linkedin"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white"></a>
-  <a href="https://stackoverflow.com/u/2157907" title="StackOverflow"><img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=flat&logo=stack-overflow&logoColor=white"></a>
-  <a href="https://vaibhavmande.com/" title="Portfolio"><img src="https://img.shields.io/badge/Portfolio-46a2f1.svg?&style=flat&logo=Google-Chrome&logoColor=white"></a>
-</p>
+## Getting Started
 
-I am Front End developer from Pune, India.
+First, run the development server:
 
-I mainly use React.js in my websites. I love talking about Unit Testing and I am a big fan of react testing library.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-I recently designed my [portfolio site](https://vaibhavmande.com "Vaibhav's portflio"), a site to manage tasks([source](https://github.com/vaibhavmande/todo-today), [demo](https://vaibhavmande.com/todo-today/)), and this personal blog ([source](https://github.com/vaibhavmande/jsnotes), [demo](https://vaibhavmande.com/jsnotes/)). I am currently working on open source projects including my own [sugar-log](https://github.com/vaibhavmande/sugar-log). You can find more about me at [vaibhavmande.com](https://vaibhavmande.com/)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This website is built using `SASS` and `Gulp`
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## About
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-- GitHub stats
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-![Vaibhav's GitHub stats](https://github-readme-stats.vercel.app/api?username=vaibhavmande&show_icons=true&theme=buefy&hide=contribs&count_private=true)
+## Learn More
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=vaibhavmande)](https://github.com/vaibhavmande/)
+To learn more about Next.js, take a look at the following resources:
 
-# Skills 👨‍💻
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- React.js, [Front-End Web Development in React Certificate](https://coursera.org/share/4be7bd76752ae1cf70e8dd89e70615ef 'Certificate')
-- JavaScript & CSS [LinkedIn Skill Assessment Certified](https://www.linkedin.com/in/vaibhavmande/)
-- Next.js [➡️](https://nextjs.org/)
-- Styled Components [➡️](https://styled-components.com/)
-- React Testing library [➡️](https://testing-library.com/)
-- WebdriverIO [➡️](https://webdriver.io/)
-- SASS [➡️](https://sass-lang.com/)
-- Responsive web design
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
