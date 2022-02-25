@@ -3,15 +3,10 @@ export default function Header() {
   return (
     <header>
       <nav className="mx-auto max-w-2xl w-full flex flex-row justify-between py-4">
-        <ul className="flex gap-8 items-center content-between">
+        <ul className="flex gap-8 items-center content-between w-full">
           <li>
             <Link href="/">
               <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects">
-              <a>Projects</a>
             </Link>
           </li>
           <li>
@@ -19,13 +14,12 @@ export default function Header() {
               <a>Resume</a>
             </Link>
           </li>
-          <li>
+          <li className="ml-auto">
             <Link href="/contact">
-              <a>Contact</a>
+              <a>Twitter</a>
             </Link>
           </li>
         </ul>
-        <button>Theme</button>
       </nav>
     </header>
   );
