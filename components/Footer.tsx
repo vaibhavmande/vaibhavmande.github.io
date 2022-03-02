@@ -17,3 +17,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+// Add stackoverflow link in the footer

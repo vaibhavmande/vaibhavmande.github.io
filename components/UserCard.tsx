@@ -24,7 +24,19 @@ export default function UserCard() {
           collection of items that I have learned and created over years.
         </p>
         <p className="mt-auto mb-2">
-          <a href="/resume">LinkedIn</a>
+          <a
+            href="https://www.linkedin.com/in/vaibhavmande/"
+            target="_blank"
+            rel="noopener"
+            className="flex gap-2"
+          >
+            <img
+              src="/static/images/linkedin.svg"
+              alt="logo of linkedin"
+              className="w-6"
+            />
+            <span className="text-lg mt-auto leading-none">LinkedIn</span>
+          </a>
         </p>
       </div>
     </section>
