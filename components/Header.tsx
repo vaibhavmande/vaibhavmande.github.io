@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import constants from '../constants';
+
 export default function Header() {
   return (
     <header>
@@ -15,8 +17,8 @@ export default function Header() {
             </Link>
           </li>
           <li className="ml-auto">
-            <Link href="/contact">
-              <a>Twitter</a>
+            <Link href={constants.github}>
+              <a>GitHub</a>
             </Link>
           </li>
         </ul>

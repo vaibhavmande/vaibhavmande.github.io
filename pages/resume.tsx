@@ -1,4 +1,4 @@
-// import TitledContent from '../components/TitledContent';
+import constants from '../constants';
 
 function Title({ title }: { title: string }) {
   return (
@@ -12,7 +12,7 @@ function Title({ title }: { title: string }) {
 
 export default function Resume() {
   return (
-    <main className="flex-1 max-w-2xl w-full mx-auto">
+    <main className="flex-1 max-w-2xl w-full mx-auto mb-8">
       <h1 className="font-bold text-3xl mb-2">Vaibhav Mande</h1>
       <h2 className="text-2xl text-gray-500 mb-6">
         Web developer in Pune, India
@@ -73,6 +73,7 @@ export default function Resume() {
         </>
       </ExperienceBlock>
       <a
+        href={constants.resume}
         target="_blank"
         rel="noopener"
         role="button"
