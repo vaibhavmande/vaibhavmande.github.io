@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import constants from '../constants';
+import TargetLink from './atoms/TargetLink';
 
 export default function Header() {
   return (
@@ -17,9 +18,17 @@ export default function Header() {
             </Link>
           </li>
           <li className="ml-auto">
-            <Link href={constants.github}>
-              <a>GitHub</a>
-            </Link>
+            <TargetLink
+              href={constants.github}
+              title="vaibhav's github profile"
+            >
+              <img
+                src="/static/images/github.svg"
+                alt="github icon"
+                className="w-4 inline align-middle mr-1"
+              />
+              <span className="align-middle">GitHub</span>
+            </TargetLink>
           </li>
         </ul>
       </nav>
