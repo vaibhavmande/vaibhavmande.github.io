@@ -4,8 +4,7 @@ import TitledContent from '../components/TitledContent';
 
 export default function Home() {
   return (
-    // w-full mx-auto
-    <main className="flex-1 max-w-2xl mx-2">
+    <>
       <UserCard />
       <section className="mb-8">
         <TitledContent title="About" secondaryUrl="/about" hasSecondary>
@@ -29,6 +28,6 @@ export default function Home() {
         </TitledContent>
       </section>
       <PostShowcase />
-    </main>
+    </>
   );
 }

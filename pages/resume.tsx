@@ -12,7 +12,7 @@ function Title({ title }: { title: string }) {
 
 export default function Resume() {
   return (
-    <main className="flex-1 max-w-2xl w-full mx-auto mb-8">
+    <>
       <h1 className="font-bold text-3xl mb-2">Vaibhav Mande</h1>
       <h2 className="text-2xl text-gray-500 mb-6">
         Web developer in Pune, India
@@ -82,7 +82,7 @@ export default function Resume() {
       >
         Download Full Resume
       </a>
-    </main>
+    </>
   );
 }
 

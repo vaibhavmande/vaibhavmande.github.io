@@ -8,7 +8,10 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <AppHead />
       <Layout>
-        <Component {...pageProps} />
+        {/* w-full mx-auto */}
+        <main className="flex-1 max-w-2xl mx-2">
+          <Component {...pageProps} />
+        </main>
       </Layout>
     </>
   );
