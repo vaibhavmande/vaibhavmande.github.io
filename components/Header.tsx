@@ -4,7 +4,7 @@ import TargetLink from './atoms/TargetLink';
 
 export default function Header() {
   return (
-    <header>
+    <header className="mx-2 sm:mx-0">
       <nav className="mx-auto max-w-2xl w-full flex flex-row justify-between py-4">
         <ul className="flex gap-8 items-center content-between w-full">
           <li>

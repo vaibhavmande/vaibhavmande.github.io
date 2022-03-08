@@ -2,8 +2,9 @@ import Image from 'next/image';
 
 export default function UserCard() {
   return (
-    <section className="grid gap-4 grid-flow-col auto-cols-auto mb-12">
-      <div className="relative w-40">
+    // grid gap-4 grid-flow-col auto-cols-auto
+    <section className="mb-12">
+      <div className="relative w-40 hidden">
         <Image
           src="/static/images/me.jpg"
           className="rounded p-0"
@@ -12,7 +13,7 @@ export default function UserCard() {
           height={350}
         />
       </div>
-      <div className="h-auto flex flex-col justify-between">
+      <div className="h-auto flex flex-col justify-between gap-4">
         <div className="main">
           <h1 className="text-2xl">Vaibhav Mande</h1>
           <h2 className="text-lg mb-0">
@@ -28,7 +29,7 @@ export default function UserCard() {
             href="https://www.linkedin.com/in/vaibhavmande/"
             target="_blank"
             rel="noopener"
-            className="flex gap-2"
+            className="flex gap-2 mt-1"
           >
             <img
               src="/static/images/linkedin.svg"

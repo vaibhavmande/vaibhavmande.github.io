@@ -1,14 +1,10 @@
 /**
- * This showcase which show posts.
- * @param number The number of posts to be displayed
+ * This component show recent three posts.
+ * @todo in the future fetch all the posts and display most recent three posts
  * @returns JSX
  */
 
 import SectionTitle from './atoms/SectionTitle';
-
-type Props = {
-  number: number;
-};
 
 type Post = {
   id: number;
@@ -49,10 +45,12 @@ const Posts = ({ posts }: { posts: Post[] }) => {
             rel="noopener noreferrer"
             target="_blank"
             aria-label={post.title}
-            className="flex justify-between items-baseline p-2 px-4 -mx-4 rounded-lg hover:bg-slate-100"
+            // md:p-2 md:px-4 md:-mx-4
+            className="flex justify-between items-baseline rounded-lg hover:bg-slate-100"
           >
             <h2>{post.title}</h2>
-            <span className="text-sm">{post.date}</span>
+            {/* text-sm */}
+            <span className="text-xs self-start leading-6">{post.date}</span>
           </a>
         </li>
       ))}
@@ -61,7 +59,7 @@ const Posts = ({ posts }: { posts: Post[] }) => {
 };
 
 /* The content should ne passed as Prop @todo */
-export default function PostShowcase({ number = 3 }: Props) {
+export default function PostShowcase() {
   return (
     <section className="mb-8">
       <SectionTitle

@@ -1,18 +1,14 @@
 import UserCard from '../components/UserCard';
-import RecentPosts from '../components/PostShowcase';
+import PostShowcase from '../components/PostShowcase';
 import TitledContent from '../components/TitledContent';
 
 export default function Home() {
   return (
-    <main className="flex-1 max-w-2xl w-full mx-auto">
+    // w-full mx-auto
+    <main className="flex-1 max-w-2xl mx-2">
       <UserCard />
       <section className="mb-8">
-        <TitledContent
-          title="About"
-          secondary="more"
-          secondaryUrl="/about"
-          hasSecondary
-        >
+        <TitledContent title="About" secondaryUrl="/about" hasSecondary>
           <>
             <p className="leading-7 mb-4">
               I am a frontend developer who loves to build interfaces using
@@ -32,8 +28,7 @@ export default function Home() {
           </>
         </TitledContent>
       </section>
-      <RecentPosts number={3} />
-      <section className="mb-8"></section>
+      <PostShowcase />
     </main>
   );
 }
