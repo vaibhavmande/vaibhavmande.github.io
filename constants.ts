@@ -7,6 +7,12 @@ const links = {
   stackoverflow: 'https://stackoverflow.com/users/2157907/vaibhavmande'
 };
 
+const paths = {
+  home: '/',
+  resume: '/resume'
+};
+
 export default Object.freeze({
-  ...links
+  ...links,
+  ...paths
 });
