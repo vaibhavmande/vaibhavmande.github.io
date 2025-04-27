@@ -1,0 +1,27 @@
+@use '../base/helpers';
+@use '../abstracts/variables';
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+main {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$home-item-gap;
+  align-items: flex-start;
+}
+
+.main-container {
+  @extend .container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$home-item-gap;
+}

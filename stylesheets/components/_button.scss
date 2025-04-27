@@ -1,0 +1,13 @@
+@use '../abstracts/variables';
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button {
+  padding: 1px 6px;
+  border: 1px outset variables.$brand-color;
+  border-radius: 3px;
+  color: variables.$text-color;
+  background-color: variables.$brand-color;
+  text-decoration: none;
+}
