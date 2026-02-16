@@ -88,10 +88,12 @@ Reference: [PLAN.md](./PLAN.md) for full design spec and rationale.
   - `<h1>Hi, my name is Vaibhav</h1>`
   - `<p>` with skills paragraph (2-3 sentences, ~40-60 words).
   - `<div class="links">` containing anchor buttons with class `button-link` for GitHub, LinkedIn, Medium.
-- Keep existing SVG icon references (`src/images/github.svg`, `src/images/linkedin.svg`) inside button links.
 - Add `rel="noopener"` and `target="_blank"` on all external links.
+- **Additional changes:**
+  - Removed SVG icons from GitHub and LinkedIn buttons (icons were not visible enough on dark background)
+  - All buttons now use text-only labels for better visibility
 
-**Verify:** Page renders with new structure. All links work. Icons display.
+**Verify:** Page renders with new structure. All links work. Text-only buttons are clearly visible.
 
 ---
 
@@ -150,13 +152,19 @@ Reference: [PLAN.md](./PLAN.md) for full design spec and rationale.
 
 ## Task 12: Create GitHub Actions deploy workflow
 
-**File:** `.github/workflows/deploy.yml`
+**Files:** `.github/workflows/deploy.yml`, `build.js`, `package.json`
 
 - Create the workflow file as specified in PLAN.md.
 - Triggers on push to `main`.
-- Steps: checkout → setup Node 20 → `npm ci` → `npm run build` → upload pages artifact → deploy pages.
+- Steps: checkout → setup Node 20 → `npm ci` → `npm run build:prod` → upload pages artifact → deploy pages.
+- **Additional changes:**
+  - Created `build.js` - Node.js script to copy only production files to `build/` directory
+  - Added `build:prod` script to `package.json` that runs `npm run build && node build.js`
+  - Updated workflow to use `npm run build:prod` and upload only `./build` directory
+  - This ensures only essential files are deployed (index.html, main.css, CNAME, favicon.ico)
+  - No node_modules, source files, or .map files are uploaded to production
 
-**Verify:** File is valid YAML. Workflow structure matches PLAN.md spec.
+**Verify:** File is valid YAML. Build script creates clean `build/` directory with only required files.
 
 ---
 
@@ -165,6 +173,8 @@ Reference: [PLAN.md](./PLAN.md) for full design spec and rationale.
 **File:** `.gitignore`
 
 - Add `dist/css/main.css` to `.gitignore` so generated CSS is not committed.
+- **Additional changes:**
+  - Added `build/` directory to `.gitignore` (generated during production build)
 
 **Verify:** `git status` no longer tracks `dist/css/main.css` after running `git rm --cached dist/css/main.css`.
 
@@ -172,11 +182,14 @@ Reference: [PLAN.md](./PLAN.md) for full design spec and rationale.
 
 ## Task 14: cleanup — Remove Gulp
 
-**Files:** `gulpfile.js`, `package.json`
+**Files:** `gulpfile.js`, `package.json`, `src/images/`
 
 - Delete `gulpfile.js`.
 - Remove any Gulp-related devDependencies from `package.json` (if any remain).
-- This is low priority and should only be done after the new page is stable.
+- **Additional changes:**
+  - Removed old npm scripts from `package.json`: `sass`, `watch-sass`, `gulp`
+  - Deleted unused image files: `src/images/demo.svg`, `src/images/github.svg`, `src/images/linkedin.svg`
+  - These images were no longer referenced after removing icons from button links
 
 **Verify:** `npm run build` still works. No references to Gulp remain.
 

@@ -1,7 +1,13 @@
-$background-color: #151515;
-$light-text-color: #d8d8d8;
-$card-background-color: #202022;
-$card-shadow-color: rgba(252, 223, 223, 0.2);
-$accent-color-gold: gold;
-$button-color-primary: #b9aa87;
-$button-color-secondary: #966892;
+// Base colors — silver-on-black theme (see PLAN.md § Color palette)
+$black: #0a0a0a;
+$near-black: #151515;
+$silver: #c0c0c0;
+$silver-bright: #e8e8e8;
+$silver-muted: #808080;
+$accent-glow: rgba(192, 192, 192, 0.2);
+
+// Semantic tokens — map base colors to usage contexts
+$bg-primary: $near-black;
+$text-primary: $silver-bright;
+$text-secondary: $silver-muted;
+$border-default: $silver;

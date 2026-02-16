@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+// Google Fonts removed — using system font stack for better performance (see PLAN.md § Typography system)
 @import './colors.scss';
 @import './spacing.scss';
 @import './media-queries.scss';
@@ -7,9 +7,12 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: $background-color;
-  font-family: 'Merriweather', serif;
-  color: white;
+  // Silver-on-black theme background (see PLAN.md § Color palette)
+  background-color: $bg-primary;
+  // System font stack — eliminates external font request and improves load performance
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  // Primary text color for silver-on-black theme
+  color: $text-primary;
 }
 
 a {
@@ -17,262 +20,84 @@ a {
 }
 
 main {
-  margin-top: 75px;
+  // Vertical centering on larger screens using flexbox
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  // Responsive padding — comfortable spacing on mobile and desktop
+  padding: 40px 20px;
 }
 
 h1 {
-  font-size: 32px;
+  // Fluid typography — scales smoothly from 32px (mobile) to 52px (desktop)
+  // clamp(min, preferred, max) ensures size stays within bounds while scaling with viewport
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-.contact {
+p {
+  // Fluid body text — scales from 16px to 18px based on viewport width
+  font-size: clamp(16px, 4vw, 18px);
+  line-height: 1.6;
+}
+
+// Links container — flexbox layout with wrapping for button groups
+.links {
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
 }
 
-.contact a:hover {
-  color: #ff505a;
-}
-
-.flag {
-  opacity: 1;
-}
-
-.experience {
-  margin-top: 25px;
-}
-
-.experience p:not(.title) {
-  padding: 12px 0;
-}
-
-.light-text {
-  color: $light-text-color;
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  opacity: 0.6;
-}
-
-.sub-title {
-  font-weight: 250;
-}
-
-.df {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-container {
-  width: 280px;
-  border-radius: 2px;
-  line-height: 1.5em;
-  letter-spacing: 0.4px;
-  background-color: $card-background-color;
-  color: #fff;
-
-  .card-title-project {
-    padding: 24px 12px 32px 12px;
-    text-align: center;
-    font-size: 22px;
-  }
-}
-
-.card-title {
-  padding: 24px 12px 38px 12px;
-  text-align: center;
-  font-size: 22px;
-}
-
-.description {
-  margin: 5px;
-  border-radius: 4px;
-  padding: 5px 5px 0;
-  text-align: center;
-  opacity: 0.6;
-}
-
-.tags {
-  padding: 12px;
-  padding-bottom: 0;
-  text-align: center;
-}
-
-.tag {
-  margin: 5px 2px;
-  padding: 0 4px;
-  border-radius: 2px;
-  display: inline-block;
-  background: #82a0aa;
-}
-
-.contact {
-  text-decoration: none;
-  color: #fff;
-}
-
-.float {
-  position: absolute;
-  top: -21px;
-  width: 100%;
-  text-align: center;
-}
-
-.card-contents {
-  position: relative;
-}
-
-.pb18 {
-  padding-bottom: 18px;
-}
-
-.vertical-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cards-container {
-  text-align: center;
-  margin: 0 auto;
-
-  & > div {
-    display: inline-block;
-    margin-bottom: 15px;
-    border-radius: 2px 0;
-    border-top: 2px solid white;
-    box-shadow: 0px 2px 2px $card-shadow-color;
-  }
-}
-
-section.title {
-  text-align: center;
-}
-
-.project-name {
-  // border-bottom: 2px solid $accent-color-gold;
-  display: inline;
-  font-size: 18px;
-}
-
-.about-contents {
-  margin: 10px;
-  margin-bottom: 15px;
-  border-radius: 4px;
-  padding: 0;
-  text-align: center;
-  opacity: 0.6;
-}
-
-.buttons-container {
-  text-align: center;
-  padding-top: 2px;
-}
-
-.button {
-  padding: 3px 5px;
-  background-color: $button-color-primary;
-  border-radius: 2px;
-  color: black;
-  letter-spacing: normal;
-  line-height: normal;
-  box-shadow: 0 4px 2px black;
-  &.secondary-button {
-    background-color: $button-color-secondary;
-    color: white;
-  }
-  &:hover {
-    filter: brightness(0.8);
-  }
-}
-
-.project-button {
+// Button link styles — silver-on-black theme with hover glow and accessible focus
+// (see PLAN.md § Button styles specification)
+.button-link {
   display: inline-flex;
-  line-height: 1em;
-  padding: 5px;
-
-  .source-btn-image {
-    transform: translateY(-1px);
-    padding-right: 2px;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 2px solid $border-default;
+  color: $silver;
+  border-radius: 4px;
+  // Smooth transitions for hover and active states
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  
+  &:hover {
+    // Subtle glow effect on hover — enhances interactivity without being distracting
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    border-color: $silver-bright;
   }
-
-  .demo-btn-image {
-    padding-right: 2px;
+  
+  &:active {
+    // Slight press effect for tactile feedback
+    transform: translateY(1px);
   }
-
-  &.disabled {
-    pointer-events: none;
-    filter: grayscale(1);
+  
+  // Modern focus-visible for keyboard navigation — only shows when tabbing
+  &:focus-visible {
+    outline: 2px solid $silver-bright;
+    outline-offset: 2px;
   }
-}
-
-.about-button {
-  background-color: #0a66c2;
-  color: white;
-  margin-top: 4px;
-  box-shadow: 0 4px 2px black;
-  .button-image {
-    transform: translateY(2px);
-    padding-right: 4px;
-  }
-}
-
-.spacer-bottom {
-  margin-bottom: 5px;
-}
-
-a.nostyle {
-  &:link {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: pointer;
-  }
-  &:visited {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
-  }
-  &.link {
-    cursor: pointer;
-    font-weight: bolder;
-    text-decoration: underline;
-  }
-  &.hover:hover {
-    text-decoration: underline;
+  
+  // Remove default focus outline when clicking (not keyboard navigating)
+  &:focus:not(:focus-visible) {
+    outline: none;
   }
 }
 
-.card-project {
-  position: relative;
-  .project-card-heading {
-    margin-bottom: 10px;
-  }
-  .card-container {
-    position: relative;
-    overflow: hidden;
-  }
-  .ribbon {
-    position: absolute;
-    z-index: 1000;
-    width: 150px;
-    right: -59px;
-    top: -1px;
-    background-color: #f9f871;
-    color: #000;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transform: rotate(45deg) translateY(100%);
-    &:before {
-      content: '';
-      position: relative;
-      display: block;
-      left: 0;
-      border: 1px dashed #202022;
-    }
-    &:after {
-      content: '';
-      position: relative;
-      display: block;
-      left: 0;
-      border: 1px dashed #202022;
-    }
-  }
+// Container — centered layout with max-width for readability (see PLAN.md § Layout)
+.container {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
 }
+
+// Old card-based styles, button styles, and utility classes removed
+// The new minimal design uses only: body, a, main, h1, p, .links, .button-link, and .container

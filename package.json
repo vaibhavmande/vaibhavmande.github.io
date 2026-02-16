@@ -4,16 +4,15 @@
   "description": "portfolio",
   "main": "index.html",
   "scripts": {
-    "sass": "node-sass --output-style expanded public/scss/main.scss -o public/css/",
-    "watch-sass": "node-sass -w --output-style expanded public/scss/main.scss -o public/css/",
-    "gulp": "gulp"
+    "build": "sass src/scss/main.scss dist/css/main.css --style=compressed",
+    "build:prod": "npm run build && node build.js",
+    "watch:css": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded",
+    "serve": "npx serve .",
+    "dev": "npm run watch:css & npm run serve"
   },
   "author": "vaibhavmande",
   "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^5.0.0"
+    "sass": "^1.77.0",
+    "serve": "^14.2.0"
   }
 }
