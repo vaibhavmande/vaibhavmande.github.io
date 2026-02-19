@@ -1,7 +1,5 @@
 // Google Fonts removed — using system font stack for better performance (see PLAN.md § Typography system)
-@import './colors.scss';
-@import './spacing.scss';
-@import './media-queries.scss';
+@use './colors.scss' as *;
 
 body {
   padding: 0;
@@ -15,6 +13,18 @@ body {
     Arial, sans-serif;
   // Primary text color for silver-on-black theme
   color: $text-primary;
+  // Improved typography settings
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings:
+    'kern' 1,
+    'liga' 1,
+    'calt' 1;
 }
 
 a {
@@ -27,22 +37,29 @@ main {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  // Responsive padding — comfortable spacing on mobile and desktop
-  padding: 40px 20px;
 }
 
 h1 {
-  // Fluid typography — scales smoothly from 32px (mobile) to 52px (desktop)
+  // Fluid typography — scales smoothly from 36px (mobile) to 64px (desktop)
   // clamp(min, preferred, max) ensures size stays within bounds while scaling with viewport
-  font-size: clamp(32px, 8vw, 52px);
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px 0;
+
+  span {
+    color: $silver-bright;
+    text-shadow: 0 0 18px rgba(232, 232, 232, 0.12);
+  }
 }
 
 p {
-  // Fluid body text — scales from 16px to 18px based on viewport width
-  font-size: clamp(16px, 4vw, 18px);
-  line-height: 1.6;
+  // Fluid body text — scales from 17px to 19px based on viewport width
+  font-size: clamp(17px, 1.6vw, 19px);
+  line-height: 1.75;
+  color: $text-primary;
+  margin: 0;
 }
 
 // Links container — flexbox layout with wrapping for button groups
@@ -50,7 +67,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 // Button link styles — silver-on-black theme with hover glow and accessible focus
@@ -68,6 +85,7 @@ p {
   transition: all 0.2s ease;
   text-decoration: none;
   font-size: 16px;
+  letter-spacing: 0.01em;
   cursor: pointer;
 
   &:hover {
@@ -96,21 +114,26 @@ p {
 
 // Container — centered layout with max-width for readability (see PLAN.md § Layout)
 .container {
-  max-width: 720px;
+  max-width: 820px;
   width: 100%;
   margin: 0 auto;
+  padding: 40px 20px;
 }
 
-// Profile image styling — left-aligned square image above h1
-.profile-image-container {
+// Optimal reading measure for paragraph text
+.container > p {
+  max-width: 62ch;
+}
+
+// Subtle accent line to reduce empty feeling
+.container::before {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 2px;
+  background: linear-gradient(90deg, $silver-bright, rgba(232, 232, 232, 0));
   margin-bottom: 24px;
-}
-
-.profile-image {
-  border-radius: 8px;
-  object-fit: cover;
-  // Subtle border to match the silver-on-black theme
-  border: 1px solid $border-default;
+  opacity: 0.9;
 }
 
 // Old card-based styles, button styles, and utility classes removed

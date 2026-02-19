@@ -24,16 +24,6 @@ try {
       dest: 'src/images/favicon.ico',
       required: true,
     },
-    {
-      src: 'src/images/output.webp',
-      dest: 'src/images/output.webp',
-      required: true,
-    },
-    {
-      src: 'src/images/output.jpg',
-      dest: 'src/images/output.jpg',
-      required: true,
-    },
   ]
 
   const missingRequired = []
@@ -49,7 +39,7 @@ try {
       missingRequired.push(src)
       console.error(`✗ Required file missing: ${src}`)
     } else {
-      console.warn(`⚠ Optional file not found, skipping: ${src}`)
+      console.warn(`⚠ File not found, skipping: ${src}`)
     }
   })
 
