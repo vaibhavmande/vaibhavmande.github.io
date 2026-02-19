@@ -4,9 +4,9 @@
   "description": "portfolio",
   "main": "index.html",
   "scripts": {
-    "build": "sass src/scss/main.scss dist/css/main.css --style=compressed",
+    "build": "sass src/scss/main.scss dist/main.css --style=compressed",
     "build:prod": "npm run build && node build.js",
-    "watch:css": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded",
+    "watch:css": "sass --watch src/scss/main.scss:dist/main.css --style=expanded",
     "serve": "npx serve .",
     "dev": "npm run watch:css & npm run serve"
   },

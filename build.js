@@ -11,14 +11,14 @@ try {
 
   // Create build directory structure
   fs.mkdirSync(BUILD_DIR, { recursive: true })
-  fs.mkdirSync(path.join(BUILD_DIR, 'dist/css'), { recursive: true })
+  fs.mkdirSync(path.join(BUILD_DIR, 'css'), { recursive: true })
   fs.mkdirSync(path.join(BUILD_DIR, 'src/images'), { recursive: true })
 
   // Copy files
   const filesToCopy = [
     { src: 'index.html', dest: 'index.html', required: true },
     { src: 'CNAME', dest: 'CNAME', required: false },
-    { src: 'dist/css/main.css', dest: 'dist/css/main.css', required: true },
+    { src: 'dist/main.css', dest: 'css/main.css', required: true },
     {
       src: 'src/images/favicon.ico',
       dest: 'src/images/favicon.ico',
