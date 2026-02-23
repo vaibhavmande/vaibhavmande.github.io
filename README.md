@@ -1,27 +1,56 @@
-<h1 align="center">Hello everyone 👋, I am Vaibhav</h1>
+# Vaibhav Mande
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-SASS-bf4080"/>
-  <img src="https://img.shields.io/badge/Using-Gulp-%23eb4a4b">
-  <a href="https://www.linkedin.com/in/vaibhavmande/" title="linkedin"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white"></a>
-  <a href="https://stackoverflow.com/u/2157907" title="StackOverflow"><img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=flat&logo=stack-overflow&logoColor=white"></a>
-  <a href="https://vaibhavmande.com/" title="Portfolio"><img src="https://img.shields.io/badge/Portfolio-46a2f1.svg?&style=flat&logo=Google-Chrome&logoColor=white"></a>
-</p>
+## About Me
 
-I’m an experienced front-end developer specializing in React and TypeScript. I have a strong focus on writing clean, testable code, ensuring reliability through both unit and integration tests. Over the years, I’ve led and designed projects from scratch, and have experience writing deployment code and managing front-end deployment pipelines.
+Senior Full Stack Developer with 13+ years building scalable web applications across the full stack — from pixel-perfect UIs to cloud-deployed backends. I specialize in taking products from concept to production (0→1), with a track record of delivering fast without cutting corners on quality. I've led teams, mentored engineers, and worked hands-on across React, Node.js, TypeScript, C#, and cloud infrastructure on both AWS and Azure.
 
-You can find more about me at [vaibhavmande.com](https://vaibhavmande.com/)
+## Tech Stack
 
-This website is built using `SASS` and `Gulp`
+**Frontend** - React · Next.js · TypeScript · JavaScript · Redux · Vite · Web Accessibility (WCAG 2.1 AA)
 
-# Skills 👨‍💻
+**Backend** - Node.js · C# · REST APIs · PostgreSQL · MySQL · MongoDB · PHP
 
-- React.js, [Front-End Web Development in React Certificate](https://coursera.org/share/4be7bd76752ae1cf70e8dd89e70615ef 'Certificate')
-- JavaScript & CSS [LinkedIn Skill Assessment Certified](https://www.linkedin.com/in/vaibhavmande/)
-- [Next.js](https://nextjs.org/)
-- [Styled Components](https://styled-components.com/)
-- [React Testing library](https://testing-library.com/)
-- [WebdriverIO](https://webdriver.io/)
-- [Playwright](https://playwright.dev/)
-- [SASS](https://sass-lang.com/)
-- Responsive web design
+**Testing & Quality** - Playwright · Jest · React Testing Library · WebdriverIO
+
+**DevOps & Cloud** - Azure DevOps Pipelines · Azure Functions · Azure Data Factory · AWS Lambda · AWS CodePipeline · S3 · GitHub Actions
+
+## Links
+
+- [vaibhavmande.com](https://vaibhavmande.com/)
+- [LinkedIn](https://www.linkedin.com/in/vaibhavmande/)
+- [GitHub](https://github.com/vaibhavmande)
+- [Medium](https://medium.com/@vaibhavmande)
+
+---
+
+# This repository
+
+This repository contains the source code for my personal website. It is a minimal, single-page landing page with a silver-on-black aesthetic.
+
+## Stack
+
+- **HTML** — semantic, minimal markup
+- **SASS** — compiled via Dart Sass (`sass` npm package); no Gulp
+- **npm scripts** — `build`, `watch:css`, `dev`, `build:prod`
+- **GitHub Actions** — builds CSS in CI and deploys to GitHub Pages
+
+## Local development
+
+```sh
+npm install
+npm run dev
+```
+
+Runs a file watcher for SASS and a local preview server concurrently.
+
+## Build & deploy
+
+Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`), which:
+
+1. Compiles `src/scss/main.scss` → `dist/css/main.css`
+2. Copies production files (`index.html`, `main.css`, `CNAME`, `favicon.ico`) to `build/`
+3. Deploys `build/` to GitHub Pages
+
+```sh
+npm run build:prod  # local production build
+```
