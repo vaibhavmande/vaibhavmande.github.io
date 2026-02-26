@@ -11,14 +11,18 @@ try {
 
   // Create build directory structure
   fs.mkdirSync(BUILD_DIR, { recursive: true })
-  fs.mkdirSync(path.join(BUILD_DIR, 'css'), { recursive: true })
+  fs.mkdirSync(path.join(BUILD_DIR, 'dist'), { recursive: true }) // Mirror dist/ so index.html keeps working on prod (see PLAN.md § Deployment pipeline)
   fs.mkdirSync(path.join(BUILD_DIR, 'src/images'), { recursive: true })
 
   // Copy files
   const filesToCopy = [
     { src: 'index.html', dest: 'index.html', required: true },
     { src: 'CNAME', dest: 'CNAME', required: false },
-    { src: 'dist/main.css', dest: 'css/main.css', required: true },
+    {
+      src: 'dist/main.css',
+      dest: 'dist/main.css',
+      required: true,
+    }, // Preserve dist/main.css path to avoid 404 from index.html link
     {
       src: 'src/images/favicon.ico',
       dest: 'src/images/favicon.ico',
