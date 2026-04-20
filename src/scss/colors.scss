@@ -6,6 +6,13 @@ $silver-bright: #e8e8e8;
 $silver-muted: #808080;
 $accent-glow: rgba(192, 192, 192, 0.2);
 
+// Emerald accent — primary interactive and highlight color
+// #10b981 is Tailwind's emerald-500; bright variant for hover/focus states
+$accent: #10b981;
+$accent-bright: #34d399;
+$accent-pressed: #059669;
+$accent-glow-emerald: rgba(16, 185, 129, 0.2);
+
 // Semantic tokens — map base colors to usage contexts
 $bg-primary: $near-black;
 $text-primary: $silver-bright;

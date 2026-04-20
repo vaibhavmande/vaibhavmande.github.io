@@ -69,49 +69,77 @@
     </script>
   </head>
   <body>
+    <!-- Hero section — full-viewport centered, animated fade-in-up -->
     <main>
-      <div class="container">
-        <p class="eyebrow">Senior Full Stack Developer · Ottawa, Canada</p>
-        <h1>Hi, my name is <span>Vaibhav</span></h1>
-        <p>
-          I'm a Senior Full Stack Developer with 13+ years building scalable web
-          applications using React, TypeScript, Node.js, and C#. I specialize in
-          taking products from concept to production with zero-defect launches,
-          comprehensive test automation, and CI/CD pipelines that ensure quality
-          at every step. Whether I'm architecting greenfield applications,
-          accelerating delivery through spec-driven development, or mentoring
-          engineering teams, I focus on balancing technical excellence with real
-          user impact. Currently exploring opportunities where modern
-          development practices and AI-assisted workflows can drive faster,
-          better results.
-        </p>
-        <div class="links">
-          <a
-            href="https://github.com/vaibhavmande"
-            class="button-link"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/vaibhavmande/"
-            class="button-link"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>LinkedIn</span>
-          </a>
-          <a
-            href="https://medium.com/@vaibhavmande"
-            class="button-link"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>Medium</span>
-          </a>
+      <section class="hero" aria-label="Introduction">
+        <div class="container hero-content">
+          <p class="eyebrow">Senior Full Stack Developer · Ottawa, Canada</p>
+          <h1>Hi, I'm <span class="accent-text">Vaibhav</span></h1>
+          <p class="hero-bio">
+            I'm a Senior Full Stack Developer with 13+ years building scalable
+            web applications using React, TypeScript, Node.js, and C#. I
+            specialize in taking products from concept to production with
+            zero-defect launches, comprehensive test automation, and CI/CD
+            pipelines that ensure quality at every step. Whether I'm
+            architecting greenfield applications, accelerating delivery through
+            spec-driven development, or mentoring engineering teams, I focus on
+            balancing technical excellence with real user impact. Currently
+            exploring opportunities where modern development practices and
+            AI-assisted workflows can drive faster, better results.
+          </p>
+
+          <!-- Tech stack inline — flat tag cloud lives in the hero, no separate section needed -->
+          <ul class="skill-pills" role="list" aria-label="Technologies">
+            <li class="pill">React</li>
+            <li class="pill">TypeScript</li>
+            <li class="pill">Node.js</li>
+            <li class="pill">C#</li>
+            <li class="pill">Next.js</li>
+            <li class="pill">Azure</li>
+            <li class="pill">AWS</li>
+            <li class="pill">CI/CD</li>
+            <li class="pill">Playwright</li>
+            <li class="pill">GraphQL</li>
+            <li class="pill">Docker</li>
+          </ul>
+
+          <div class="links">
+            <!-- Primary CTA gets emerald fill; secondary links stay outlined -->
+            <a
+              href="https://www.linkedin.com/in/vaibhavmande/"
+              class="button-link button-link--primary"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Connect on LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/vaibhavmande"
+              class="button-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://medium.com/@vaibhavmande"
+              class="button-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Medium</span>
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Blog section placeholder — to be implemented in a future iteration -->
+      <!-- <section id="blog" class="blog-section" aria-label="Blog">
+        <div class="container">
+          <h2 class="section-heading">Writing</h2>
+          <p>Posts coming soon.</p>
+        </div>
+      </section> -->
     </main>
   </body>
 </html>
