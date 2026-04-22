@@ -12,7 +12,6 @@
   },
   "author": "vaibhavmande",
   "devDependencies": {
-    "sass": "^1.77.0",
-    "serve": "^14.2.0"
+    "sass": "^1.77.0"
   }
 }

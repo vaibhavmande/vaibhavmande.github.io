@@ -1,6 +1,7 @@
 @use './colors.scss' as *;
-// Inter from Google Fonts — optical sizing and weight range for polished typography
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+// Manrope variable font — geometric sans with a sharp, modern character
+// Replaces Inter for a more distinctive developer portfolio aesthetic
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap');
 
 // ─── Animations ──────────────────────────────────────────────────────────────
 
@@ -40,9 +41,9 @@ body {
   padding: 0;
   margin: 0;
   background-color: $bg-primary;
-  // Inter-first font stack with system fallbacks for resilience
+  // Manrope-first font stack — variable weight range (400–800) in one request
   font-family:
-    'Inter',
+    'Manrope',
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -51,7 +52,8 @@ body {
     Arial,
     sans-serif;
   color: $text-primary;
-  font-size: clamp(17px, 1.3vw, 19px);
+  // Reduced from 17–19px — Manrope reads cleanly at 15–16px, keeps layout compact
+  font-size: clamp(15px, 1.1vw, 16px);
   line-height: 1.6;
   letter-spacing: -0.01em;
   // Subpixel rendering for crisp text on dark backgrounds
@@ -86,12 +88,12 @@ ul {
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
-// Hero section fills the full viewport — no nav to subtract
+// Hero section — padding-driven layout; min-height: 100vh removed to eliminate
+// excessive whitespace on tall viewports (see PLAN.md § Hero section)
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 0;
+  padding: 72px 0 60px;
 }
 
 // Hero content animates in on load — staggered children via animation-delay
@@ -101,21 +103,25 @@ ul {
 
 // Eyebrow — small uppercase label above the h1 for context
 .eyebrow {
-  font-size: clamp(12px, 1vw, 14px);
+  font-size: clamp(10px, 0.85vw, 11px);
   font-weight: 600;
-  letter-spacing: 0.32em;
+  // Tightened from 0.32em — that value was far too wide for this size;
+  // 0.16em tracks well at 10–11px without looking cramped
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: $text-secondary;
-  margin: 0 0 20px 0;
+  margin: 0 0 12px 0;
 }
 
 h1 {
-  // Fluid type — scales from 48px (mobile) to 80px (large desktop)
-  font-size: clamp(48px, 7vw, 80px);
-  font-weight: 700;
+  // Fluid type — scales from 40px (mobile) to 64px (large desktop)
+  // Tighter ceiling than before; Manrope 800 reads large at this scale
+  font-size: clamp(40px, 5.5vw, 64px);
+  // 800 weight available in Manrope variable — stronger display heading
+  font-weight: 800;
   line-height: 1.02;
   letter-spacing: -0.04em;
-  margin: 0 0 24px 0;
+  margin: 0 0 16px 0;
 }
 
 // Accent text — emerald color applied to the name in the h1
@@ -128,10 +134,12 @@ h1 {
 
 // Hero bio paragraph — constrained width for comfortable reading measure
 .hero-bio {
-  font-size: clamp(17px, 1.4vw, 19px);
-  line-height: 1.8;
+  // Aligned with compact base scale — no longer double-sizing relative to body
+  font-size: clamp(15px, 1.15vw, 16px);
+  // Reduced from 1.8 — tighter but still comfortable for a long bio paragraph
+  line-height: 1.7;
   color: $text-primary;
-  max-width: 62ch;
+  max-width: 60ch;
   margin: 0;
   opacity: 0.9;
 }
@@ -142,8 +150,9 @@ h1 {
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 32px;
+  gap: 10px;
+  // Reduced from 32px to compress vertical rhythm
+  margin-top: 24px;
 }
 
 // Base button link — outlined style used for secondary CTAs
@@ -151,7 +160,8 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 11px 22px;
+  // Slightly tighter padding to match the compact type scale
+  padding: 9px 18px;
   background: transparent;
   border: 1.5px solid rgba(192, 192, 192, 0.35);
   color: $silver;
@@ -162,7 +172,7 @@ h1 {
     color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.1s ease;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.01em;
   cursor: pointer;
@@ -216,11 +226,12 @@ h1 {
 // Pills row — flex wrap so they flow naturally at any width
 // Lives inside the hero; margin-top creates breathing room after the bio
 .skill-pills {
-  margin-top: 24px;
+  // Reduced from 24px — tightens vertical rhythm without crowding
+  margin-top: 16px;
   margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 // Individual skill pill — dark background with emerald border
@@ -228,10 +239,11 @@ h1 {
 .pill {
   display: inline-flex;
   align-items: center;
-  padding: 6px 14px;
+  // Tighter padding matches the compact scale
+  padding: 4px 11px;
   border: 1.5px solid rgba(16, 185, 129, 0.35);
   border-radius: 100px; // fully rounded pill shape
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: $accent;
   background: rgba(16, 185, 129, 0.05);
@@ -261,8 +273,8 @@ h1 {
 // ─── Responsive ───────────────────────────────────────────────────────────────
 
 @media (max-width: 600px) {
-  // Reduce vertical padding on mobile so hero content isn't pushed too far down
+  // Tighter padding on mobile — matches the reduced desktop values
   .hero {
-    padding: 48px 0;
+    padding: 40px 0 36px;
   }
 }
