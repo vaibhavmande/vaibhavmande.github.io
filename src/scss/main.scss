@@ -232,6 +232,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  // Constrained to match the bio paragraph width — prevents pills from
+  // stretching to the full container edge while text content sits left-aligned
+  max-width: 60ch;
 }
 
 // Individual skill pill — dark background with emerald border
